@@ -1,0 +1,11 @@
+﻿@using RazorClassLibrary1.Shared
+<Router AppAssembly="@GetType().Assembly" AdditionalAssemblies="new[] { typeof(RazorClassLibrary1.Shared.MainLayout).Assembly}" >
+	<Found Context="routeData">
+		<RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+	</Found>
+	<NotFound>
+		<LayoutView Layout="@typeof(MainLayout)">
+			<p>Sorry, there's nothing at this address.</p>
+		</LayoutView>
+	</NotFound>
+</Router>
